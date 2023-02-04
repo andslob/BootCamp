@@ -1,4 +1,4 @@
-﻿int [] array = new int[n];
+﻿int[] array = new int[n];
 for (int i = 0; i < n; i++)
     array[i] = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("[" + string.Join(", ", array) + "]");
@@ -14,9 +14,9 @@ for (int i = 0; i < n; i++)
 Console.WriteLine(summa);
 // O(n^2)
 int n = Convert.ToInt32(Console.ReadLine());
-for(int i = 1; i <= n; i++)
+for (int i = 1; i <= n; i++)
 {
-    for(int j = 1; j <= n; j++)
+    for (int j = 1; j <= n; j++)
     {
         Console.Write(i * j);
         Console.Write("\t");
@@ -25,22 +25,37 @@ for(int i = 1; i <= n; i++)
 }
 // O(n^2 / 2)
 int n = Convert.ToInt32(Console.ReadLine());
-int [, ] matrix = new int[n, m];
-for(int i = 0; i < n; i++)
+int[,] matrix = new int[n, m];
+for (int i = 0; i < n; i++)
 {
-    for(int j = 0; j < n; j++)
+    for (int j = 0; j < n; j++)
     {
         matrix[i, j] = (i + 1) * (j + 1);
-        matrix[j, i] = (i + 1) * (j + 1);    
+        matrix[j, i] = (i + 1) * (j + 1);
     }
     Console.WriteLine();
 }
-for(int i = 0; i < n; i++)
+for (int i = 0; i < n; i++)
 {
-    for(int j = 0; j < n; j++)
+    for (int j = 0; j < n; j++)
     {
         Console.Write(matrix[i, j]);
         Console.Write(" ");
     }
+    Console.WriteLine();
+}
+
+
+// НОД (Алгоритм Евклида)
+int n = 140;
+int m = 175;
+while (n != m)
+{
+    if (n > m)
+        n = n - m;
+    else
+        m = m - n;
+    Console.WriteLine(n);
+    Console.WriteLine(m);
     Console.WriteLine();
 }
